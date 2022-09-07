@@ -4,6 +4,12 @@
             [clj-globetrotter.core :as core]
             [clj-globetrotter.world :refer [world]]))
 
+(defonce travel-emoji
+  {:plane "✈️"
+   :train "🚆"
+   :ferry "⛴️"
+   :bus "🚌"})
+
 (defonce cities
   (apply sorted-set (map :source world)))
 
@@ -13,5 +19,5 @@
        (str/join " ")))
 
 (.render js/ReactDOM
-  (.createElement js/React "h2" nil "Hello, React!")
-  (.getElementById js/document "app"))
+         (.createElement js/React "h2" nil "Hello, React!")
+         (.getElementById js/document "app"))
