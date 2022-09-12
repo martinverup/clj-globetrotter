@@ -1,5 +1,6 @@
 (ns clj-globetrotter.core
-  (:require [clojure.data.priority-map :refer [priority-map-keyfn]]
+  (:require #?(:clj [clojure.data.priority-map :refer [priority-map-keyfn]]
+               :cljs [tailrecursion.priority-map :refer [priority-map-keyfn]])
             [clojure.string :as str]))
 
 (def ^:private infinity-ish 99999999)
